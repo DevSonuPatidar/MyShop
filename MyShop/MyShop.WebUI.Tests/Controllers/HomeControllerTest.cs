@@ -46,7 +46,7 @@ namespace MyShop.WebUI.Tests.Controllers
 
             // Act
             ViewResult result = controller.Contact() as ViewResult;
-
+           
             // Assert
             Assert.IsNotNull(result);
         }
