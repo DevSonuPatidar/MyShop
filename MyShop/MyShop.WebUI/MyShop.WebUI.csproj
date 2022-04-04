@@ -55,6 +55,10 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.2\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -79,9 +83,6 @@
     <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Optimization">
-      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -170,6 +171,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProductManagerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -235,6 +237,10 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ProductManager\Index.cshtml" />
+    <Content Include="Views\ProductManager\Edit.cshtml" />
+    <Content Include="Views\ProductManager\Delete.cshtml" />
+    <Content Include="Views\ProductManager\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -251,6 +257,24 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyShop.Core\MyShop.Core.csproj">
+      <Project>{ae1697a0-eeaf-4bc6-a2e7-8b74a4938281}</Project>
+      <Name>MyShop.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.DataAccess.InMemory\MyShop.DataAccess.InMemory.csproj">
+      <Project>{e7d4cdfb-3fbf-4713-8f40-aab13cd03dac}</Project>
+      <Name>MyShop.DataAccess.InMemory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.DataAccess.SQL\MyShop.DataAccess.SQL.csproj">
+      <Project>{59b285d7-3cc3-458c-99ed-54455a623761}</Project>
+      <Name>MyShop.DataAccess.SQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyShop.Services\MyShop.Services.csproj">
+      <Project>{a2e28df5-1cd0-4b88-8bbe-2d7bdee8aa4d}</Project>
+      <Name>MyShop.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
