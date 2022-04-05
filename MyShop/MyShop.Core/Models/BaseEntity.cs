@@ -17,5 +17,5 @@ namespace MyShop.Core.Models
             this.CreateAt = DateTime.Now;
         }
         //Public BaseEntity;
-    }
+    }   
 }
