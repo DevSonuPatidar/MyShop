@@ -13,8 +13,8 @@ namespace MyShop.WebUI.Controllers
 {
     public class ProductManagerController : Controller
     {
-        Core.Contracts.IRepository<Product> context;
-        Core.Contracts.IRepository<ProductCategory> productCategories;
+        MyShop.Core.Contracts.IRepository<Product> context;
+        MyShop.Core.Contracts.IRepository<ProductCategory> productCategories;
 
         public ProductManagerController(Core.Contracts.IRepository<Product> productContext , Core.Contracts.IRepository<ProductCategory> productCategoryContext)
         {
