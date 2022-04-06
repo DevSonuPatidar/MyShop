@@ -1,7 +1,7 @@
 ﻿@model MyShop.Core.ViewModels.ProductManagerViewModel
 
 
-@using (Html.BeginForm("Create", "ProductManager", FormMethod.Post, new { encType = "multipart/formdata" }))
+@using (Html.BeginForm("Create", "ProductManager", FormMethod.Post, new { encType = "multipart/form-data" }))
 
 {
 @Html.AntiForgeryToken()
