@@ -82,16 +82,17 @@ namespace MyShop.WebUI.Controllers
             }
             else
             {
+                if (!ModelState.IsValid)
+                {
+                    return View(product);
+                }
                 if (file != null)
                 {
                     productToEdit.Image = product.Id + Path.GetExtension(file.FileName);
                     file.SaveAs(Server.MapPath("//content//ProductImages//") + productToEdit.Image);
                 }
 
-                if (!ModelState.IsValid)
-                {
-                    return View(product);
-                }
+               
 
                     productToEdit.Category = product.Category;
                     productToEdit.Description = product.Description;

@@ -104,7 +104,7 @@ namespace MyShop.Services
                               select new BasketItemViewModel()
                               {
                                   Id = b.Id,
-                                  Quantity = b.Quanity,
+                                  Quanity = b.Quanity,
                                   ProductName = p.Name,
                                   Image = p.Image,
                                   Price = p.Price
