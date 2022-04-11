@@ -22,7 +22,7 @@
 
         <div class="col-md-4" style="height:auto; width:49%;padding:10px;border: 1px solid black;border-radius:10px;margin:1px;">
             <div class="col-md-12 text-center">
-                <img class="img" style="height:250px" src="~/Content/ProductImages/@item.Image" />
+                <img class="img" style="height:250px;width:inherit;border-radius:10px;" src="~/Content/ProductImages/@item.Image" />
             </div>
             <div class="col-md-12 text-center">
                 <strong>@Html.ActionLink(item.Name, "Details", new { id = item.Id })</strong>
