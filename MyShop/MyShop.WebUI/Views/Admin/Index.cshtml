@@ -2,22 +2,32 @@
     ViewBag.Title = "Admin";
 
 }
+<style>
+    h2 {
+        font-weight: bold;
+    }
 
-<h2>Admin Pages</h2>
-<div class="col-md-6">
-    <h4>Product Manager</h4>
-    <div class="list-group">
-        @Html.ActionLink("Product Categories", "Index", "ProductCategoryManager", null, new { @class = "list-group-item" })
-        @Html.ActionLink("Product ", "Index", "ProductManager", null, new { @class = "list-group-item" })
+    h3 {
+        text-decoration: underline;
+    }
+</style>
+<div class="row">
+    <div class="col-md-12">
+        <h2>Admin Pages</h2>
+        <div class="col-md-6">
+            <h3>Product Manager</h3>
+            <div class="list-group">
+                @Html.ActionLink("Product Categories", "Index", "ProductCategoryManager", null, new { @class = "list-group-item" })
+                @Html.ActionLink("Product ", "Index", "ProductManager", null, new { @class = "list-group-item" })
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <h3>Order Manager</h3>
+            <div class="list-group">
+                @Html.ActionLink("Orders", "Index", "OrderManager", null, new { @class = "list-group-item" })
+            </div>
+        </div>
     </div>
 </div>
-
-<div class="col-md-6">
-    <h4>Product Manager</h4>
-    <div class="list-group">
-        @Html.ActionLink("Orders", "Index", "OrderManager", null, new { @class = "list-group-item" })
-    </div>
-</div>
-<div class="col-md-12 clearfix">
-
-</div>
+<div class="col-md-12 clearfix"></div>

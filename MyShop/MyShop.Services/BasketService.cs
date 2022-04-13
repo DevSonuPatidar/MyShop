@@ -23,9 +23,11 @@ namespace MyShop.Services
 
         private Basket GetBasket(HttpContextBase httpContext, bool createIfNull)
         {
+            
             HttpCookie cookie = httpContext.Request.Cookies.Get(BasketSessionName);
 
             Basket basket = new Basket();
+            
             if (cookie != null)
             {
                 string basketId = cookie.Value;
@@ -149,18 +151,6 @@ namespace MyShop.Services
             basketContext.Commit();
 
         }
-
-        //private Basket GetBasket(HttpContext httpContext, bool v)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public void ClearBasket(HttpContextBase httpContext)
-        //{
-        //    Basket basket = GetBasket(httpContext, false);
-        //    basket.BasketItems.Clear();
-        //    basketContext.Commit();
-        //}
     }
 
 }
